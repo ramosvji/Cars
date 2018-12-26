@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: carApplication
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/carrosDB?verifyServerCertificate=false&useSSL=false
+    username: root
+    password: ramos1990
+
+server:
+  port: 8000
