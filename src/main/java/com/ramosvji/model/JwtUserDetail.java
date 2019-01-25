@@ -1,6 +1,7 @@
 package com.ramosvji.model;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,7 +15,7 @@ public class JwtUserDetail implements UserDetails {
 	private Long id;
 	private Collection<? extends GrantedAuthority> authorities;
 
-	public JwtUserDetail(String userName, String token, Long id, Collection<? extends GrantedAuthority> authorities) {
+	public JwtUserDetail(String userName, String token, Long id, List<GrantedAuthority> authorities) {
 		super();
 		this.userName = userName;
 		this.token = token;

@@ -9,7 +9,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 
 /*
- * Extrae los datos que llegron
+ * Extrae los datos que llegaron
  */
 @Component
 public class JwtValidator {

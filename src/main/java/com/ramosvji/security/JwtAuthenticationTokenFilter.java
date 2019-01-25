@@ -22,7 +22,7 @@ public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessi
 	
 	private final static int INDEX = 7;
 
-	protected JwtAuthenticationTokenFilter() {
+	public JwtAuthenticationTokenFilter() {
 		super("/ramosvji/api/**");	
 	}
 
