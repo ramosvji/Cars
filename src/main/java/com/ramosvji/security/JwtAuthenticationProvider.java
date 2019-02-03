@@ -15,6 +15,9 @@ import com.ramosvji.model.JwtAuthenticationToken;
 import com.ramosvji.model.JwtUser;
 import com.ramosvji.model.JwtUserDetail;
 
+/*
+ * Provee la autenticación
+ */
 @Component
 public class JwtAuthenticationProvider extends AbstractUserDetailsAuthenticationProvider {
 	
@@ -24,7 +27,6 @@ public class JwtAuthenticationProvider extends AbstractUserDetailsAuthentication
 	@Override
 	protected void additionalAuthenticationChecks(UserDetails userDetails,
 			UsernamePasswordAuthenticationToken authentication) throws AuthenticationException {
-		// TODO Auto-generated method stub
 		
 	}
 

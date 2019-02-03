@@ -18,14 +18,17 @@ import com.ramosvji.model.JwtAuthenticationToken;
 /*
  * Se crea un filto para los JWT.
  */
-public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessingFilter{
+public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessingFilter {
 	
 	private final static int INDEX = 7;
 
 	public JwtAuthenticationTokenFilter() {
 		super("/ramosvji/api/**");	
 	}
-
+	
+	/*
+	 * Se maneja la solicitud que viene con el JWT, se valida el token si es nulo, vacio, invalido.
+	 */
 	@Override
 	public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
 			throws AuthenticationException, IOException, ServletException {
@@ -37,6 +40,8 @@ public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessi
 		}
 		
 		String authenticationToken = header.substring(INDEX);
+		
+		//se compueba si el token es correcto con AuthenticationManager
 		JwtAuthenticationToken jwtAuthenticationToken = new JwtAuthenticationToken(authenticationToken);
 		
 		return getAuthenticationManager().authenticate(jwtAuthenticationToken);
@@ -48,7 +53,6 @@ public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessi
 		super.successfulAuthentication(request, response, chain, authResult);
 		chain.doFilter(request, response);;
 	}
-	
 	
 
 }

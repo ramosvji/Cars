@@ -1,11 +1,6 @@
 package com.ramosvji.model;
 
-/*
- * Payload de JWT, se sustituye la fecha de creación por el role
- */
-
 public class JwtUser {
-	
 	private String name;
 	private long id;
 	private String role;
@@ -33,5 +28,4 @@ public class JwtUser {
 	public void setRole(String role) {
 		this.role = role;
 	}
-	
 }

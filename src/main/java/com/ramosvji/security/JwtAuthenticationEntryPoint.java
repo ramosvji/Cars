@@ -10,6 +10,9 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
 
+/*
+ * Detecta si es un acceso no autorizado
+ */
 @Component
 public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint{
 

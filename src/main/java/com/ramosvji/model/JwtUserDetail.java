@@ -6,6 +6,9 @@ import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+/*
+ * Recibe usuario, id, y role. Guarda el Token
+ */
 public class JwtUserDetail implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
